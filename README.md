@@ -1,2 +1,2 @@
 # lantern
-learning github from lantern
+learning github at lantern
