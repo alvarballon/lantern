@@ -1,7 +1,14 @@
+services:
+  - docker
+
 language: python
+
 script:
   - python -m pytest -v
   - black shop_list/*.py
   - black *.py
   - flake8 shop_list/*.py
   - flake8 *.py
+
+after_success:
+  - sh .travis/deploy_dockerhub.sh
